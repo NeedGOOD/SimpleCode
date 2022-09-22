@@ -11,15 +11,8 @@ int main() {
     std::cin >> c;
     std::cout << '\n';
 
-    double sum = 0.0, product = 0.0, average = 0.0;
-
-    sum = a + b + c;
-    product = a * b * c;
-    average = (a + b + c) / 3.0;
-
-    std::cout << "sum = " << sum << '\n'
-            << "product = " << product << '\n'
-            << "average = " << average << "\n\n";
-    
+    std::cout << "sum = " << a + b + c << '\n'
+            << "product = " << a * b * c << '\n'
+            << "average = " << (a + b + c) / 3.0 << "\n\n";
     return 0;
 }

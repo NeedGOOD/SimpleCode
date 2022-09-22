@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-    int a, b;
+    double a, b;
 
     std::cout << "Enter a: ";
     std::cin >> a;
@@ -21,23 +21,18 @@ int main() {
     std::cin >> menu;
     std::cout << '\n';
 
-    double sum = a + b;
-    double difference = a - b;
-    double product = a * b;
-    double fraction = a / b;
-
     switch (menu) {
         case 1:
-            std::cout << "sum = " << sum << '\n';
+            std::cout << "sum = " << a + b << '\n';
             break;
         case 2:
-            std::cout << "difference = " << difference << '\n';
+            std::cout << "difference = " << a - b << '\n';
             break;
         case 3:
-            std::cout << "product = " << product << '\n';
+            std::cout << "product = " << a * b << '\n';
             break;
         case 4:
-            std::cout << "fraction = " << fraction << '\n';
+            std::cout << "fraction = " << a / b << '\n';
             break;
         default:
             std::cout << "Not have this math function\n";
