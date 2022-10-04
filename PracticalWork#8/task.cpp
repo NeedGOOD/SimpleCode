@@ -1,17 +1,23 @@
 #include <iostream>
 
-int sum(float a, float b) {
-    return a + b;
+void foo(int *a, int *b) {
+    int time = *a;
+    *a = *b;
+    *b = time;
 }
 
 int main() {
-    float c;
+    int a = 5;
+    int b = 6;
 
-    float x = 5.5;
-    float y = 10.6;
+    std::cout << "Before:\n"
+              << "first a = " << a << '\n'
+              << "first b = " << b << '\n';
+
+    foo(&a, &b);
     
-    c = sum(x, y);
-
-    std::cout << "c = " << c << '\n';
+    std::cout << "\nAfter:\n"
+              << "second a = " << a << '\n'
+              << "second b = " << b << '\n';
     return 0;
 }
